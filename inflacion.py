@@ -130,25 +130,28 @@ with tab_plots:
         st.write(df)
 
     def display_map(df,fecha):
-        map = folium.Map(location=[-36.375962, -65.287933], zoom_start = 3  )
-        choropleth = folium.Choropleth(
-            geo_data=gpd.read_file(r"RegionesArgentina.geojson"),
-            data = df,
-            columns = ("Regiones","2017","2018","2019","2020","2021","2022"),
-            key_on= "feature.properties.index",
-            line_opacity=0.8,
-            highlight=True
-        )
-        choropleth.geojson.add_to(map)
+        html = open("map.html","r",encoding="utf-8").read()
+        st.components.v1.html(html,width=700, height=450)
+        
+#         map = folium.Map(location=[-36.375962, -65.287933], zoom_start = 3  )
+#         choropleth = folium.Choropleth(
+#             geo_data=gpd.read_file(r"RegionesArgentina.geojson"),
+#             data = df,
+#             columns = ("Regiones","2017","2018","2019","2020","2021","2022"),
+#             key_on= "feature.properties.index",
+#             line_opacity=0.8,
+#             highlight=True
+#         )
+#         choropleth.geojson.add_to(map)
 
-        for feature in choropleth.geojson.data["features"]:
-            Regiones = feature["properties"]["index"]
-            feature["properties"]["IPC"] = "IPC acumulado: " + str(df.loc[df["Regiones"]==Regiones,fecha])
+#         for feature in choropleth.geojson.data["features"]:
+#             Regiones = feature["properties"]["index"]
+#             feature["properties"]["IPC"] = "IPC acumulado: " + str(df.loc[df["Regiones"]==Regiones,fecha])
 
-        choropleth.geojson.add_child(
-            folium.features.GeoJsonTooltip(["index"], labels=False)
-        )
-        st_map = st_folium(map,width=700, height=450)
+#         choropleth.geojson.add_child(
+#             folium.features.GeoJsonTooltip(["index"], labels=False)
+#         )
+#         st_map = st_folium(map,width=700, height=450)
     
 
 

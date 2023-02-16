@@ -70,7 +70,7 @@ with tab_plots:
 
     st.write("2022")
 
-    image = Image.open('Mundial\Arg_y_el_mundo_top.jpg')
+    image = Image.open('Arg_y_el_mundo_top.jpg')
     st.image(image, caption='Fuente : https://datosmacro.expansion.com/')
 
 

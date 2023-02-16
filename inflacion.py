@@ -397,18 +397,17 @@ with tab_plots:
 
     image= Image.open('arima3.png')
     st.image(image)
-    st.write("""Con esta grafica podemos ver lo siguiente:
+    st.markdown("""Con esta grafica podemos ver lo siguiente:
     
-        Arriba a la izquierda: los errores residuales parecen fluctuar alrededor de una media de cero y tienen una varianza uniforme.
+    Arriba a la izquierda: los errores residuales parecen fluctuar alrededor de una media de cero y tienen una varianza uniforme.
 
-        Arriba a la derecha: el gráfico de densidad sugiere una distribución normal con media cero.
+    Arriba a la derecha: el gráfico de densidad sugiere una distribución normal con media cero.
 
-        Abajo a la izquierda: Todos los puntos deben estar perfectamente alineados con la línea roja. Cualquier desviación significativa implicaría que la distribución está sesgada.
+    Abajo a la izquierda: Todos los puntos deben estar perfectamente alineados con la línea roja. Cualquier desviación significativa implicaría que la distribución está sesgada.
 
-        Abajo a la derecha: El gráfico Correlogram, también conocido como ACF, muestra que los errores residuales no están autocorrelacionados. 
-        Cualquier autocorrelación implicaría que existe algún patrón en los errores residuales que no se explican en el modelo.
-        Por lo tanto, deberá buscar más X (predictores) para el modelo.
-        """)
+    Abajo a la derecha: El gráfico Correlogram, también conocido como ACF, muestra que los errores residuales no están autocorrelacionados. 
+    Cualquier autocorrelación implicaría que existe algún patrón en los errores residuales que no se explican en el modelo.
+    Por lo tanto, deberá buscar más X (predictores) para el modelo.""")
 
     
     st.write("En el siguiente grafico vemos la predicción vs la serie original, si bien se acerca, no es perfecto")

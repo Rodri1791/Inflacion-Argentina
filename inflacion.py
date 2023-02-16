@@ -20,12 +20,12 @@ st.caption(APP_sub_title)
 
 # ---------------------------------------Load DATA------------------------------------------------------
 
-mundial= pd.read_csv(r"Mundial\mundial.csv")
-geomund = gpd.read_file(r"Mundial\countries.geojson")
+mundial= pd.read_csv(r"mundial.csv")
+geomund = gpd.read_file(r"countries.geojson")
 inflacion = pd.read_csv(r"indice-precios-al-consumidor-nivel-general-base-diciembre-2016-mensual.csv")
 salarios = pd.read_csv(r"salarios.csv")
 tipo_de_cambio = pd.read_csv(r"tipo_de_cambio.csv")
-balanza_comercial = pd.read_excel(r"Balanza comercial\balanmensual.xls")
+balanza_comercial = pd.read_excel(r"balanmensual.xls")
 balanza_pagos = pd.read_csv(r"balanza_pagos.csv")
 ipc = pd.read_csv(r"IPC2.csv",sep=",")
 

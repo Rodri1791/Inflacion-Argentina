@@ -381,6 +381,8 @@ with tab_plots:
 
     st.plotly_chart(fig9)
 
+    st.write("Aplicamos ARIMA con diferentes parámetros en base a análisis previos y vemos sus resultados.")
+    
     st.write("""ARIMA(5,2,5)""")
 
     image= Image.open('arima1.jpg')
@@ -395,7 +397,8 @@ with tab_plots:
 
     image= Image.open('arima3.png')
     st.image(image)
-    st.write("""
+    st.write("""Con esta grafica podemos ver lo siguiente:
+    
         Arriba a la izquierda: los errores residuales parecen fluctuar alrededor de una media de cero y tienen una varianza uniforme.
 
         Arriba a la derecha: el gráfico de densidad sugiere una distribución normal con media cero.
@@ -406,9 +409,11 @@ with tab_plots:
         Cualquier autocorrelación implicaría que existe algún patrón en los errores residuales que no se explican en el modelo.
         Por lo tanto, deberá buscar más X (predictores) para el modelo.""")
 
+    
+    st.write("En el siguiente grafico vemos la predicción vs la serie original, si bien se acerca, no es perfecto")
     image= Image.open('arima4.png')
     st.image(image)
-    st.write("Aquí vemos la predicción vs la serie original, si bien se acerca, no es perfecto")
+    
 
     st.write("""Para comprobar la calidad del ajuste del modelo entrenado a los datos de la serie temporal proporcionados, 
         podemos usar el método `predict` del modelo ARIMA entrenado para trazar los valores reales y pronosticados 

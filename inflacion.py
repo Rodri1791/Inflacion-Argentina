@@ -407,7 +407,8 @@ with tab_plots:
 
         Abajo a la derecha: El gráfico Correlogram, también conocido como ACF, muestra que los errores residuales no están autocorrelacionados. 
         Cualquier autocorrelación implicaría que existe algún patrón en los errores residuales que no se explican en el modelo.
-        Por lo tanto, deberá buscar más X (predictores) para el modelo.""")
+        Por lo tanto, deberá buscar más X (predictores) para el modelo.
+        """)
 
     
     st.write("En el siguiente grafico vemos la predicción vs la serie original, si bien se acerca, no es perfecto")

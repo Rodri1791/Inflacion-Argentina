@@ -336,9 +336,10 @@ with tab_plots:
     extranjeros (no residentes), distinguiendo el tipo funcional de inversión, es decir, inversión directa, de
     cartera, derivados financieros, otra inversión y activos de reserva """)
     # Grafico evolucion balanza de pagos
+    st.write(balanza_pagos.columns[0])
     fig8 = px.histogram(balanza_pagos, x=balanza_pagos.columns[0], y='Capacidad/Necesidad de financiamiento', 
                     title="Balanza de pagos",
-                        template="plotly_dark",labels={"Unnamed.0":"","Capacidad/Necesidad de financiamiento":"Valores"})
+                        template="plotly_dark",labels={"Unnamed. 0":"","Capacidad/Necesidad de financiamiento":"Valores"})
     fig8.update_traces(xbins_size="M1", hovertemplate=None)
     fig8.update_xaxes(showgrid=True)
     fig8.update_layout(bargap=0.1)

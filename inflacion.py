@@ -165,6 +165,10 @@ with tab_plots:
 
         a = inflacionmap.columns[1:]
         fecha = st.selectbox("Año",a,len(a)-1)
+        
+        #Imagen
+        st.image("https://img.freepik.com/vector-premium/bandera-acuarela-argentina-ilustracion-trazo-pincel_97886-10157.jpg", width=800)
+
 
         # Funciones
         tabla(inflacionmes,fecha)

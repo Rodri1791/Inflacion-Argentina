@@ -437,11 +437,10 @@ with tab_plots:
     
     st.write("""MAPE: Mean Absolute Percent Error (Media del Error Absoluto en Porcentaje) mide el promedio del error en porcentaje.""")
 
-    st.write("""Definimos que el mejor es el que tiene un resultado de alrededor del 53,4 % de MAPE que implica que el 
-    modelo tiene una precisión de alrededor del 46.6 % para predecir. No es un buen valor, por eso, no 
-    seguimos con la prediccion.""")
-    st.write("""Deberiamos intentar con otros parametros a ver si tenemos mejor resultado, buscar mas datos para poder
-      tener un mejor entrenamiento o probar con otro modelo como NeuralProphet""")
+    st.write("""Definimos que el mejor es el que tiene un resultado de alrededor del 53,4 % de MAPE que implica que el modelo tiene una precisión de alrededor 
+    del 46.6 % para predecir. No es un buen valor, por eso, no seguimos con la predicción.""")
+    st.write("""Deberíamos intentar con otros parámetros a ver si tenemos mejor resultado, buscar más datos para poder 
+    tener un mejor entrenamiento o probar con otro modelo como NeuralProphet""")
 
 
 

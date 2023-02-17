@@ -16,6 +16,8 @@ APP_sub_title = "origen: datos.gob.ar"
 st.set_page_config(APP_title)
 st.title(APP_title)
 st.caption(APP_sub_title)
+#Imagen
+st.image("https://img.freepik.com/vector-premium/bandera-acuarela-argentina-ilustracion-trazo-pincel_97886-10157.jpg", width=800)
 
 
 # ---------------------------------------Load DATA------------------------------------------------------
@@ -166,8 +168,6 @@ with tab_plots:
         a = inflacionmap.columns[1:]
         fecha = st.selectbox("Año",a,len(a)-1)
         
-        #Imagen
-        st.image("https://img.freepik.com/vector-premium/bandera-acuarela-argentina-ilustracion-trazo-pincel_97886-10157.jpg", width=800)
 
 
         # Funciones

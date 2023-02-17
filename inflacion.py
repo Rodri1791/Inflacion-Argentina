@@ -400,7 +400,7 @@ with tab_plots:
     image= Image.open('arima2.jpg')
     st.image(image)
 
-
+    st.write("En este caso si analizamos los resultamos a partir de AIC, podemos decir que el modelo con arima(5,0,5) es mejor porque obtiene un menor resultado")
 
     image= Image.open('arima3.png')
     st.image(image)

@@ -3,7 +3,7 @@ En este proyecto hago un análisis de la inflación en Argentina en 3 aspectos y
 
  ## Comparación Argentina con el mundo
 Aquí hago una comparación de la inflación en el mundo con un mapa, mostrando la inflación argentina y del mundo a través de los años.
-También muestro como quedo rankeada en el 2022 a nivel mundial.
+También muestro como quedo ranqueada en el 2022 a nivel mundial.
 
 ## Argentina
 En este apartado muestro la inflación en argentina, su evolución y variaciones mensuales.

@@ -1,4 +1,9 @@
 # Inflacion-Argentina
+
+<br>
+<center><img src="https://images8.alphacoders.com/447/447967.jpg"></center>
+<br>
+
 En este proyecto hago un análisis de la inflación en Argentina en 3 aspectos y luego aplico el modelo ARIMA.
 
  ## Comparación Argentina con el mundo

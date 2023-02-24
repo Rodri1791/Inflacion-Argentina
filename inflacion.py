@@ -404,7 +404,7 @@ with tab_plots:
         print('Probablemente estacionaria')""")
     
     image= Image.open('ad_fuller.png')
-    st.image(image)
+    st.image(image, width=800)
 
     st.write("""Una vez que sabemos que la serie probablemente es estacionaria, aplicamos la siguiente función para ver 
     cuáles son los mejores hiperparametros del modelo ARIMA.""")

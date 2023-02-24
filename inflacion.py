@@ -390,10 +390,9 @@ with tab_plots:
 
     st.write("Utilizamos la prueba de Dickey-Fuller aumentada (ADF) para chequear si la serie es estacionaria o no.")
 
-    st.write("""**¿Cuáles son nuestras hipótesis?**
-    *   $H_{0}$: tiene una raíz unitaria (serie no estacionaria).
-    
-    *   $H_{1}$: no tiene una raíz unitaria (serie estacionaria). """)
+    st.write("""**¿Cuáles son nuestras hipótesis?**""")
+    st.markdown("$H_{0}$: tiene una raíz unitaria (serie no estacionaria).")
+    st.markdown("$H_{1}$: no tiene una raíz unitaria (serie estacionaria).")
 
     st.code("""from statsmodels.tsa.stattools import adfuller
     data = ipc2.values
@@ -490,20 +489,19 @@ with tab_plots:
     image= Image.open('arimad.png')
     st.image(image)
 
-    st.write("""Valores pronosticados por el modelo:
-    - Enero : 5.26825204 
-    - Febrero : 4.90362904 
-    - Marzo : 5.0569651
-    - Abril : 4.81403047
-    - Mayo : 4.96768265
-    - Junio : 5.4474125  
-    - Julio : 5.46244198 
-    - Agosto : 5.37474489 
-    - Septiembre : 5.48295512 
-    - Octubre : 5.43303108
-    - Noviembre : 5.44979314
-    - Diciembre :  5.58631082
-    """)
+    st.markdown("""Valores pronosticados por el modelo:""")
+    st.markdown("- Enero : 5.26825204")
+    st.markdown("- Febrero : 4.90362904") 
+    st.markdown("- Marzo : 5.0569651")
+    st.markdown("- Abril : 4.81403047")
+    st.markdown("- Mayo : 4.96768265")
+    st.markdown("- Junio : 5.4474125")
+    st.markdown("- Julio : 5.46244198")
+    st.markdown("- Agosto : 5.37474489")
+    st.markdown("- Septiembre : 5.48295512") 
+    st.markdown("- Octubre : 5.43303108")
+    st.markdown("- Noviembre : 5.44979314")
+    st.markdown("- Diciembre :  5.58631082")
     
 
 

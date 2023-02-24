@@ -391,10 +391,9 @@ with tab_plots:
     st.write("Utilizamos la prueba de Dickey-Fuller aumentada (ADF) para chequear si la serie es estacionaria o no.")
 
     st.write("""**¿Cuáles son nuestras hipótesis?**
-
-    $H_{0}$: tiene una raíz unitaria (serie no estacionaria).
-
-    $H_{1}$: no tiene una raíz unitaria (serie estacionaria). """)
+    *   $H_{0}$: tiene una raíz unitaria (serie no estacionaria).
+    
+    *   $H_{1}$: no tiene una raíz unitaria (serie estacionaria). """)
 
     st.code("""from statsmodels.tsa.stattools import adfuller
     data = ipc2.values

@@ -446,6 +446,13 @@ with tab_plots:
             continue
     print('Best ARIMA%s RMSE=%.3f' % (best_cfg, best_score))""")
 
+    st.code("""# Evaluamos los parametros / evaluate parameters
+    p_values = [0, 1, 2, 4, 6, 8, 10]
+    d_values = range(0, 3)
+    q_values = range(0, 3)
+    warnings.filterwarnings("ignore")
+    evaluate_models(ipc.values, p_values, d_values, q_values)""")
+
     image= Image.open('evaluate_parameters.png')
     st.image(image)
 

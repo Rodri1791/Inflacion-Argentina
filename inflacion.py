@@ -403,8 +403,17 @@ with tab_plots:
     else:
         print('Probablemente estacionaria')""")
     
-    image= Image.open('ad_fuller.png')
-    st.image(image, width=800)
+    st.write(from statsmodels.tsa.stattools import adfuller
+    data = ipc2.values
+    stat, p, lags, obs, crit, t = adfuller(data)
+    print('stat=%.3f, p=%.3f' % (stat, p))
+    if p > 0.05:
+        print('Probablemente no estacionaria')
+    else:
+        print('Probablemente estacionaria'))
+
+    # image= Image.open('ad_fuller.png')
+    # st.image(image, width=800)
 
     st.write("""Una vez que sabemos que la serie probablemente es estacionaria, aplicamos la siguiente función para ver 
     cuáles son los mejores hiperparametros del modelo ARIMA.""")

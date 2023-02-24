@@ -17,6 +17,9 @@ Además, un mapa con el análisis de las regiones argentinas y su inflación.
 ## Algunas variables influyentes
 Aquí analizo 4 variables diferentes (Salarios – Tipo de cambio real – Balanza comercial – Balanza de pagos) y como afectan a la inflación. Muestro con diferentes gráficos la relación entre ellas.
 
-## Serie temporal
+## Serie temporal.
 Por ultimo aplique el modelo ARIMA, entrenando el modelo con los datos y luego probando si predice correctamente o no. 
 
+## WEB APP STREAMLIT
+
+"https://rodri1791-inflacion-argentina-inflacion-d0qf7g.streamlit.app/" 

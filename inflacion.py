@@ -388,34 +388,86 @@ with tab_plots:
 
     st.plotly_chart(fig9)
 
-    st.write("Aplicamos ARIMA con diferentes parámetros en base a análisis previos y vemos sus resultados.")
+    st.write("Utilizamos la prueba de Dickey-Fuller aumentada (ADF) para chequear si la serie es estacionaria o no.")
+
+    st.write("""**¿Cuáles son nuestras hipótesis?**
+    *   $H_{0}$: tiene una raíz unitaria (serie no estacionaria).
+    *   $H_{1}$: no tiene una raíz unitaria (serie estacionaria). """)
+
+    st.code("""from statsmodels.tsa.stattools import adfuller
+    data = ipc2.values
+    stat, p, lags, obs, crit, t = adfuller(data)
+    print('stat=%.3f, p=%.3f' % (stat, p))
+    if p > 0.05:
+        print('Probablemente no estacionaria')
+    else:
+        print('Probablemente estacionaria')""")
     
-    st.write("""ARIMA(5,2,5)""")
-
-    image= Image.open('arima1.jpg')
+    image= Image.open('ad_fuller.png')
     st.image(image)
 
-    st.write("ARIMA(5,0,5)")
+    st.write("""Una vez que sabemos que la serie probablemente es estacionaria, aplicamos la siguiente función para ver 
+    cuáles son los mejores hiperparametros del modelo ARIMA.""")
 
-    image= Image.open('arima2.jpg')
+    st.code("""# evaluate an ARIMA model for a given order (p,d,q)
+    def evaluate_arima_model(X, arima_order):
+    # prepare training dataset
+    train_size = int(len(X) * 0.66)
+    train, test = X[0:train_size], X[train_size:]
+    history = [x for x in train]
+    # make predictions
+    predictions = list()
+    for t in range(len(test)):
+    model = ARIMA(history, order=arima_order)
+    model_fit = model.fit()
+    yhat = model_fit.forecast()[0]
+    predictions.append(yhat)
+    history.append(test[t])
+    # calculate out of sample error
+    rmse = sqrt(mean_squared_error(test, predictions))
+    return rmse""")
+    st.code("""# evaluate combinations of p, d and q values for an ARIMA model
+    def evaluate_models(dataset, p_values, d_values, q_values):
+    dataset = dataset.astype('float32')
+    best_score, best_cfg = float("inf"), None
+    for p in p_values:
+    for d in d_values:
+        for q in q_values:
+        order = (p,d,q)
+        try:
+            rmse = evaluate_arima_model(dataset, order)
+            if rmse < best_score:
+            best_score, best_cfg = rmse, order
+            print('ARIMA%s RMSE=%.3f' % (order,rmse))
+        except:
+            continue
+    print('Best ARIMA%s RMSE=%.3f' % (best_cfg, best_score))""")
+
+    image= Image.open('evaluate_parameters.png')
     st.image(image)
 
-    st.write("En este caso si analizamos los resultamos a partir de AIC, podemos decir que el modelo con arima(5,0,5) es mejor porque obtiene un menor resultado")
+    st.write("Como vemos en la imagen anterior, los mejores hiperparametros son (8,1,1), por ende, vamos a utilizar esos.")
+    
+    st.write("""Aplicamos ARIMA(8,1,1) y vemos su resultado""")
 
-    image= Image.open('arima3.png')
+    image= Image.open('arima.png')
     st.image(image)
-    st.markdown("Con esta grafica podemos ver lo siguiente:")
+    
+    st.markdown("Con la siguiente grafica podemos ver lo siguiente:")
     st.markdown("Arriba a la izquierda: los errores residuales parecen fluctuar alrededor de una media de cero y tienen una varianza uniforme.")
     st.markdown("Arriba a la derecha: el gráfico de densidad sugiere una distribución normal con media cero.")
     st.write("""Abajo a la izquierda: Todos los puntos deben estar perfectamente alineados con la línea roja. 
                 Cualquier desviación significativa implicaría que la distribución está sesgada.""")
-    st.write("""Abajo a la derecha: El gráfico Correlogram, también conocido como ACF, muestra que los errores residuales no están autocorrelacionados.
-    Cualquier autocorrelación implicaría que existe algún patrón en los errores residuales que no se explican en el modelo.
+    st.write("""Abajo a la derecha: El gráfico Correlogram, también conocido como ACF, muestra que los errores residuales no están auto correlacionados.
+    Cualquier auto correlación implicaría que existe algún patrón en los errores residuales que no se explican en el modelo.
     Por lo tanto, deberá buscar más X (predictores) para el modelo.""")
 
+    image= Image.open('arimaa.png')
+    st.image(image)
+
     
-    st.write("En el siguiente grafico vemos la predicción vs la serie original, si bien se acerca, no es perfecto")
-    image= Image.open('arima4.png')
+    st.write("En el siguiente grafico vemos la predicción vs la serie original, si bien se acerca, vemos que no es perfecto")
+    image= Image.open('arimab.png')
     st.image(image)
     
 
@@ -423,25 +475,35 @@ with tab_plots:
         podemos usar el método `predict` del modelo ARIMA entrenado para trazar los valores reales y pronosticados 
         uno encima del otro. Verifiquemos qué tan bien funciona la predicción:""")
     
-    st.write("ARIMA(5,2,5)")
-    image= Image.open('arima5.png')
-    st.image(image)
-    st.write("Test MAPE: 0.534")
     
-    st.write("""La linea roja es lo predicho""")
-    
-    st.write("ARIMA(5,0,5)")
-    image= Image.open('arima6.png')
+    image= Image.open('arimac.png')
     st.image(image)
-    st.write("Test MAPE: 0.634")
+    st.write("Test MAPE: 0.526")
     
     st.write("""MAPE: Mean Absolute Percent Error (Media del Error Absoluto en Porcentaje) mide el promedio del error en porcentaje.""")
 
-    st.write("""Definimos que el mejor es el que tiene un resultado de alrededor del 53,4 % de MAPE que implica que el modelo tiene una precisión de alrededor 
-    del 46.6 % para predecir. No es un buen valor, por eso, no seguimos con la predicción.""")
-    st.write("""Deberíamos intentar con otros parámetros a ver si tenemos mejor resultado, buscar más datos para poder 
-    tener un mejor entrenamiento o probar con otro modelo como NeuralProphet""")
+    st.write("""52,6 % de MAPE que implica que el modelo tiene una precisión de alrededor del 47.4 % para predecir. No es un buen valor, pero seguimos con la prediccion final""")
 
+    st.write("""Por último, hacemos el pronóstico de 12 meses (1 año) con el modelo entrenado, obteniendo la siguiente gráfica:""")
+
+    image= Image.open('arimad.png')
+    st.image(image)
+
+    st.write("""Valores pronosticados por el modelo:
+    - Enero : 5.26825204 
+    - Febrero : 4.90362904 
+    - Marzo : 5.0569651
+    - Abril : 4.81403047
+    - Mayo : 4.96768265
+    - Junio : 5.4474125  
+    - Julio : 5.46244198 
+    - Agosto : 5.37474489 
+    - Septiembre : 5.48295512 
+    - Octubre : 5.43303108
+    - Noviembre : 5.44979314
+    - Diciembre :  5.58631082
+    """)
+    
 
 
 

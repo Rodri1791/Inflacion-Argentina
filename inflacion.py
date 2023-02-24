@@ -403,14 +403,8 @@ with tab_plots:
     else:
         print('Probablemente estacionaria')""")
     
-    st.write(from statsmodels.tsa.stattools import adfuller
-    data = ipc2.values
-    stat, p, lags, obs, crit, t = adfuller(data)
-    print('stat=%.3f, p=%.3f' % (stat, p))
-    if p > 0.05:
-        print('Probablemente no estacionaria')
-    else:
-        print('Probablemente estacionaria'))
+    st.write("""**stat=-3.110, p=0.026
+    Probablemente estacionaria**""")
 
     # image= Image.open('ad_fuller.png')
     # st.image(image, width=800)

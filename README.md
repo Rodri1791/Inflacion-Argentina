@@ -22,4 +22,5 @@ Por ultimo aplique el modelo ARIMA, entrenando el modelo con los datos y luego p
 
 ## WEB APP STREAMLIT
 
-"https://rodri1791-inflacion-argentina-inflacion-d0qf7g.streamlit.app/" 
+### [Streamlit APP](https://rodri1791-inflacion-argentina-inflacion-d0qf7g.streamlit.app/)
+### [Codigo APP](https://github.com/Rodri1791/Inflacion-Argentina/blob/main/inflacion.py)

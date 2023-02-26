@@ -10,6 +10,9 @@ En este proyecto hago un análisis de la inflación en Argentina en 3 aspectos y
 Aquí hago una comparación de la inflación en el mundo con un mapa, mostrando la inflación argentina y del mundo a través de los años.
 También muestro como quedo ranqueada en el 2022 a nivel mundial.
 
+<img src="Rodri1791/Inflacion-Argentina/Imagenes/Arg_y_el_mundo_top.jpg" alt="Arg" style="width: 90%; height: auto;" />
+
+
 ## Argentina
 En este apartado muestro la inflación en argentina, su evolución y variaciones mensuales.
 Además, un mapa con el análisis de las regiones argentinas y su inflación.
@@ -19,6 +22,11 @@ Aquí analizo 4 variables diferentes (Salarios – Tipo de cambio real – Balan
 
 ## Serie temporal.
 Por ultimo aplique el modelo ARIMA, entrenando el modelo con los datos y luego probando si predice correctamente o no. 
+
+<img src="Rodri1791/Inflacion-Argentina/Imagenes/arimac.png" alt="Arima" style="width: 90%; height: auto;" />
+
+<img src="Rodri1791/Inflacion-Argentina/Imagenes/arimad.png" alt="Arima" style="width: 90%; height: auto;" />
+
 
 ## WEB APP STREAMLIT
 

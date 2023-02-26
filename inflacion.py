@@ -132,7 +132,7 @@ with tab_plots:
         st.write(df)
 
     def display_map(df,fecha):
-        html = open("map.html","r",encoding="utf-8").read()
+        html = open("Imagenes/map.html","r",encoding="utf-8").read()
         st.components.v1.html(html,width=700, height=450)
         
 #         map = folium.Map(location=[-36.375962, -65.287933], zoom_start = 3  )

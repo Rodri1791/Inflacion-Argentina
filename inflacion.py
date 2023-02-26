@@ -406,7 +406,7 @@ with tab_plots:
     st.write("""**stat=-3.110, p=0.026
     Probablemente estacionaria**""")
 
-    # image= Image.open('ad_fuller.png')
+    # image= Image.open('Imagenes/ad_fuller.png')
     # st.image(image, width=800)
 
     st.write("""Una vez que sabemos que la serie probablemente es estacionaria, aplicamos la siguiente función para ver 
@@ -460,7 +460,7 @@ with tab_plots:
     
     st.write("""Aplicamos ARIMA(8,1,1) y vemos su resultado""")
 
-    image= Image.open('arima.png')
+    image= Image.open('Imagenes/arima.png')
     st.image(image)
     
     st.markdown("Con la siguiente grafica podemos ver lo siguiente:")
@@ -472,12 +472,12 @@ with tab_plots:
     Cualquier auto correlación implicaría que existe algún patrón en los errores residuales que no se explican en el modelo.
     Por lo tanto, deberá buscar más X (predictores) para el modelo.""")
 
-    image= Image.open('arimaa.png')
+    image= Image.open('Imagenes/arimaa.png')
     st.image(image)
 
     
     st.write("En el siguiente grafico vemos la predicción vs la serie original, si bien se acerca, vemos que no es perfecto")
-    image= Image.open('arimab.png')
+    image= Image.open('Imagenes/arimab.png')
     st.image(image)
     
 
@@ -486,7 +486,7 @@ with tab_plots:
         uno encima del otro. Verifiquemos qué tan bien funciona la predicción:""")
     
     
-    image= Image.open('arimac.png')
+    image= Image.open('Imagenes/arimac.png')
     st.image(image)
     st.write("Test MAPE: 0.526")
     
@@ -496,7 +496,7 @@ with tab_plots:
 
     st.write("""Por último, hacemos el pronóstico de 12 meses (1 año) con el modelo entrenado, obteniendo la siguiente gráfica:""")
 
-    image= Image.open('arimad.png')
+    image= Image.open('Imagenes/arimad.png')
     st.image(image)
 
     st.markdown("""Valores pronosticados por el modelo:""")

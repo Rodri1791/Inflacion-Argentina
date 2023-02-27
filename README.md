@@ -1,4 +1,4 @@
-# Inflacion-Argentina
+# Inflación Argentina
 
 <br>
 <center><img src="https://images8.alphacoders.com/447/447967.jpg"></center>

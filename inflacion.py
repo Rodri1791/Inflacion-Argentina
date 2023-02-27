@@ -124,6 +124,8 @@ with tab_plots:
     st.write("""En este caso podemos ver como la inflación mensual en argentina fue aumentando poco a poco 
                 llegando a extremos en los cuales se tiene una inflación mensual igual a la que tiene otro país en un año""")
 
+
+    st.write("""En el siguiente grafico pueden ver la inflación de las diferentes regiones de Argentina en diferentes años""")
     # Colocamos la tabla
     def tabla(df,fecha):
         df=df.round(2)
@@ -267,7 +269,7 @@ with tab_plots:
     precios locales debe llevar un aumento en el tipo de cambio para mantener los precios reales 
     y alineados con los globales.""")
 
-    st.write("""Si al aguien le interesa profundizar en el tema puede leer este articulo
+    st.write("""Si a alguien le interesa profundizar en el tema puede leer este articulo
     https://observatorio.unr.edu.ar/10-preguntas-para-entender-las-variaciones-del-tipo-de-cambio/""")
 
     # Grafico de tipo de cambio vs IPC  (Variacion )

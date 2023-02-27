@@ -124,6 +124,7 @@ with tab_plots:
     st.write("""En este caso podemos ver como la inflación mensual en argentina fue aumentando poco a poco 
                 llegando a extremos en los cuales se tiene una inflación mensual igual a la que tiene otro país en un año""")
 
+    st.markdown("---")
 
     st.write("""En el siguiente grafico pueden ver la inflación de las diferentes regiones de Argentina en diferentes años""")
     # Colocamos la tabla

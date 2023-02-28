@@ -398,7 +398,7 @@ with tab_plots:
     st.markdown("$H_{1}$: no tiene una raíz unitaria (serie estacionaria).")
 
     st.code("""from statsmodels.tsa.stattools import adfuller
-    data = ipc2.values
+    data = ipc.values
     stat, p, lags, obs, crit, t = adfuller(data)
     print('stat=%.3f, p=%.3f' % (stat, p))
     if p > 0.05:

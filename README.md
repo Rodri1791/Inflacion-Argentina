@@ -33,7 +33,7 @@ Por ultimo aplique el modelo ARIMA, entrenando el modelo con los datos y luego p
 ### [Streamlit APP](https://rodri1791-inflacion-argentina-inflacion-d0qf7g.streamlit.app/)
 ### [Codigo APP](https://github.com/Rodri1791/Inflacion-Argentina/blob/main/inflacion.py)
 
-# Inflation Argentina <img src="https://www.comprarbanderas.es/images/banderas/400/14-reino-unido_400px.jpg" style="width: 5%; height: auto;" />
+# Argentine inflation <img src="https://www.comprarbanderas.es/images/banderas/400/14-reino-unido_400px.jpg" style="width: 5%; height: auto;" />
 
 In this proyect I did an analysis of the Argentina´s inflation in 3 aspects and then I apply the ARIMA model 
 

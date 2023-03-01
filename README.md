@@ -1,4 +1,4 @@
-# Inflación Argentina
+# Inflación Argentina <img src="https://www.dscasturias.com/WebRoot/StoreES3/Shops/ec8259/5B22/3B17/5576/7419/600F/52DF/D016/E45D/images.jpg" style="width: 5%; height: auto;" />
 
 <br>
 <center><img src="https://images8.alphacoders.com/447/447967.jpg"></center>
@@ -32,3 +32,40 @@ Por ultimo aplique el modelo ARIMA, entrenando el modelo con los datos y luego p
 
 ### [Streamlit APP](https://rodri1791-inflacion-argentina-inflacion-d0qf7g.streamlit.app/)
 ### [Codigo APP](https://github.com/Rodri1791/Inflacion-Argentina/blob/main/inflacion.py)
+
+# Inflation Argentina <img src="https://www.comprarbanderas.es/images/banderas/400/14-reino-unido_400px.jpg" style="width: 5%; height: auto;" />
+
+In this proyect I did an analysis of the Argentina´s inflation in 3 aspects and then I apply the ARIMA model 
+
+## Argentina versus the world
+
+Here you can see a map where I did a comparison between the inflations of the world and you can see that in differents years.
+Also I show how Argentina was ranked in 2022 worldwide.
+
+<img src="https://github.com/Rodri1791/Inflacion-Argentina/blob/main/Imagenes/Arg_y_el_mundo_top.jpg" alt="Arg" style="width: 60%; height: auto;" />
+
+## Argentina
+
+In this part you can see the Argentina´s inflation, its evolution and monthly variations.
+In addition, a map with the analysis of the Argentine regions and their inflation.
+
+## Some influential variables
+
+
+Here I analyze 4 different variables (Salaries – Real exchange rate – Trade balance – Balance of payments) and how they affect inflation. I show with different graphs the relationship between them.
+
+## Time Series.
+
+Finally I applied the ARIMA model, training the model with the data and then testing if it predicts correctly or not.
+
+<img src="https://github.com/Rodri1791/Inflacion-Argentina/blob/main/Imagenes/arimac.png" alt="Arima" style="width: 60%; height: auto;" />
+
+<img src="https://github.com/Rodri1791/Inflacion-Argentina/blob/main/Imagenes/arimad.png" alt="Arima" style="width: 60%; height: auto;" />
+
+
+## WEB APP STREAMLIT
+
+### [Streamlit APP](https://rodri1791-inflacion-argentina-inflacion-d0qf7g.streamlit.app/)
+### [Code APP](https://github.com/Rodri1791/Inflacion-Argentina/blob/main/inflacion.py)
+
+
